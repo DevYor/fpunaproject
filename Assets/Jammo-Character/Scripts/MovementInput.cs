@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //This script requires you to have setup your animator with 3 parameters, "InputMagnitude", "InputX", "InputZ"
 //With a blend tree to control the inputmagnitude and allow blending between animations.
@@ -42,6 +43,11 @@ public class MovementInput : MonoBehaviour {
 		cam = Camera.main;
 		controller = this.GetComponent<CharacterController> ();
 	}
+
+	public void goToMenu()
+    {
+		SceneManager.LoadScene("Menu");
+    }
 	
 	// Update is called once per frame
 	void Update () {
